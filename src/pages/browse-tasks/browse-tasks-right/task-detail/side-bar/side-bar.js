@@ -81,7 +81,9 @@ class SideBar extends React.Component {
               ) ||
               (status === "completed" && userRole === "assignee"
                 &&
-                <div className="green-button">Leave Review</div>
+                <div className="green-button" onClick={() => {
+                  this.pushToGeneratedUrl('leave-review')
+                }}>Leave Review</div>
               ) ||
               (status === "completed"
                 &&
