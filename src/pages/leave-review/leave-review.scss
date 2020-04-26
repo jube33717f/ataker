@@ -1,0 +1,20 @@
+.leave-review-form {//same as .posttask-form
+    position: fixed;
+    top: 100px;
+    z-index: 2;
+    height: auto;
+    min-height: 530px;
+    height: auto;
+    max-height: 90%;//responsive design
+    width :100%;//responsive design
+    max-width: 500px;
+    background: white;
+    box-shadow: 10px 10px 9px -9px #1887a075;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
