@@ -18,7 +18,7 @@ import PostTask from "./pages/post-task/post-task";
 import MyTasks from "./pages/browse-tasks/my-tasks/my-tasks";
 import "./App.scss";
 import MakeAnOffer from "./pages/make-an-offer/make-an-offer";
-import LeaveReview from "./pages/leave-review/leave-review"
+
 export default class App extends Component {
   render() {
     return (
@@ -42,7 +42,7 @@ export default class App extends Component {
         <Route path="/*/update-offer/*-:id" component={MakeAnOffer} />
         <Route path="/*/reply-offer-:targetId" component={ReplyForm} />
         <Route path="/*/reply-question-:targetId" component={ReplyForm} />
-        <Route path="/*/leave-review/*-:id" component={LeaveReview} />
+
       </Router>
     );
   }

@@ -51,5 +51,5 @@ export const validators = {
   accountBsb: validatorNumOfDigits(6),
   postCode: validatorNumOfDigits(4),
   dateOfBirth: validatorDateOfBirth,
-  mobileNumber: validatorNumOfDigits(10)
+  mobileNumber: validatorNumOfDigits(10),
 };
