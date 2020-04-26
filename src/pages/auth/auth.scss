@@ -1,0 +1,127 @@
+.auth-form {
+  position: fixed;
+  top: 100px;
+  z-index: 2;
+  background: white;
+  animation: 0.5s ease-in 0s 1 normal none running slideIn; //
+  height: auto;
+  min-height: 500px;
+  max-height: 90%;//responsive design
+  width :100%;//responsive design
+  max-width: 400px;
+  box-shadow: 10px 10px 9px -9px #1887a075;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+ 
+  &__content {
+    input {
+      display: block;
+      margin: 5px 0px 0px;
+      width: 100%;
+    }
+    padding: 10px 20px;
+   
+    div:nth-child(3) { //for "name" and "age" fields insign up form
+      display: flex;
+      justify-content: space-between;
+      > div {
+        width: 45%;
+      }
+    }
+  
+  }
+
+  .bottom-buttons {
+    border: none;
+    &--social-media {
+    button {
+      display: flex;
+      align-items: center;
+      img{
+        width:20px;
+        margin: 0px 10px;
+      }
+    }
+    button:first-child {
+      margin-right: 5px;
+      color: rgb(255, 255, 255);
+      background-color: #3b5998;
+    }
+    button:last-child {
+      margin-left: 5px;
+      background-color: rgb(246, 248, 253);
+      color: black;
+      border:  rgb(231, 235, 251) 2px  solid;
+    }
+  }
+}
+
+&__bottom-section {
+  color: rgb(41, 43, 50);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin: 4px auto 0px;
+    padding: 12px 20px 16px;
+    margin: 10px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(187, 194, 220);
+    display: flex;
+    justify-content: space-between;
+}
+
+  .error-message {
+    margin-bottom: 10px;
+  }
+}
+
+.seperator-wrapper {
+  text-align: center;
+    position: relative;
+    color: rgb(84, 90, 119);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin: 16px 0px;
+  &:after {
+    right: 16px;
+
+    top: 50%;
+      content: "";
+      position: absolute;
+      width: 30%;
+      border-width: 1px 0px 0px;
+      border-image: initial;
+      border-top: 1px solid rgb(187, 194, 220);
+  }
+  &:before {
+    left: 16px;
+    top: 50%;
+    content: "";
+    position: absolute;
+    width: 30%;
+    border-width: 1px 0px 0px;
+    border-top: 1px solid rgb(187, 194, 220);
+  }
+  
+}
+
+
+.blue-link {
+  background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 143, 180);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-area--invalid {
+  border-color: rgb(231, 82, 69) ;
+  border-width: 1px;
+}

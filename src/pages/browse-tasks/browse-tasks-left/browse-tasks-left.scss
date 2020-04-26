@@ -1,0 +1,292 @@
+.task__list {
+  // left: 5%;
+  // position:absolute; //SONIA：把这删了，不然不能让地图和左边任务列表同时显示在一排
+  overflow-y: scroll;
+  
+
+  // width: 364px; //SONIA: 用flex后width不写死
+  z-index: -1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  border-right: 0;
+  transition: left 0.5s ease-in;
+  .task__list--newlist--loadmore--frame {
+    position: relative;
+    z-index: 0;
+    // height:34px;
+    //background:#7db343;
+   
+    
+    .task__list--newlist--loadmore {
+      
+      //content:"qwq";
+      z-index: 5;
+      opacity: 1;
+      pointer-events: all;
+      cursor: pointer;
+      // -webkit-font-smoothing: antialiased;
+      font-weight: 700;
+     
+      // margin-top: 10px;
+      top:30px;
+      left: 30%;
+      height: 34px;
+      width: 222px;
+      margin: 10px auto;
+      margin-bottom: -40px;
+      border-radius: 4px;
+      position: relative;
+      transform: translate(-50%, -100%);
+      text-align: center;
+      // color: #fff;
+      line-height: 34px;
+      font-size: 11px;
+      text-transform: uppercase;
+      box-shadow: 4px 6px 8px rgba(187, 194, 220, 0.6);
+      background: #008fb4;
+      color:#fff;
+      .newlist--loadmore--count {
+        font-weight: 900;
+        //background-color: blue($color: #000000);
+        z-index: 5;
+        line-height: 20px;
+      }
+      .newlist--loadmore--message {
+        
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+        z-index: 5;
+        opacity: 1;
+        pointer-events: all;
+        cursor: pointer;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .vertical--scroll {
+    margin-top: 45px;
+    background: #f6f8fd;
+    z-index: -2;
+    transition: padding-top 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    .group {
+      transition: padding-top 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      .newtask__list--item {
+        width: 364px;
+        -webkit-box-shadow: 0 1px rgba(187, 194, 220, 0.6);
+        box-shadow: 0 1px rgba(187, 194, 220, 0.6);
+        display: block;
+        opacity: 1;
+        padding: 0 12px;
+        overflow: hidden;
+        background: #fff;
+        position: relative;
+        border-radius: 4px;
+        margin: 10px 7px 20px 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: -webkit-box-shadow 0.1s ease-out;
+        transition: -webkit-box-shadow 0.1s ease-out;
+        -o-transition: box-shadow 0.1s ease-out;
+        transition: box-shadow 0.1s ease-out;
+        transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0);
+        &--open{
+          //background: ;
+          border-left: 2px solid #7db343;
+        }
+        &--open--style{
+          border: 1px solid rgba(2,165,209,.5);
+          box-shadow: 0 0 1px 1px rgba(2,165,209,.29);
+          border-left: 2px solid #7db343;
+        }
+        &::before {
+          
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 3px;
+          display: block;
+          position: absolute;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        &:hover{
+          box-shadow: 3px 5px 8px rgba(187,194,220,.6);
+        }
+        &:active{
+          border: 1px solid rgba(2,165,209,.5);
+          box-shadow: 0 0 1px 1px rgba(2,165,209,.29);
+          border-left: 2px solid #7db343;
+        }
+        
+        
+        .newtask__list--item--header {
+          display: flex;
+          margin: 10px 0 5px;
+          &--title {
+            font-family: Helvetica;
+            font-weight: 600;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            font-size: 17px;
+            line-height: 20px;
+            color: #292b32;
+          }
+          &--price {
+            font-weight: 500;
+            float: right;
+            font-size: 24px;
+            margin-left: 10px;
+            line-height: 24px;
+            color: #292b32;
+          }
+        }
+        .newtask__list--item--body {
+          margin: 10px 0 15px;
+          min-height: 34px;
+          &--avatar {
+            float: right;
+          }
+          .avatar__img {
+            margin-top: 7px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              display: block;
+              margin: 0 auto;
+              border: 1px solid #bbc2dc;
+              border-radius: 50%;
+              height: 32px;
+              width: 32px;
+            }
+          }
+          .newtask__list--item--avatar--online {
+            -webkit-font-smoothing: antialiased;
+            font-weight: 500;
+            font-size: 12px;
+            color: #545a77;
+            &::before {
+              content: "🌎";
+              font-family: airtasker_icons;
+              speak: none;
+              font-style: normal;
+              font-weight: 400;
+              font-variant: normal;
+              text-transform: none;
+              display: inline;
+              -webkit-font-smoothing: antialiased;
+            }
+            &--detail {
+              margin-left: 5px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+          .newtask__list--item--dateat--icon--calendar {
+            -webkit-font-smoothing: antialiased;
+            font-weight: 500;
+            font-size: 12px;
+            color: #545a77;
+            &::before {
+              display: inline-block;
+              position: relative;
+              text-align: center;
+              font-size: 12px;
+              width: 13px;
+              top: 2px;
+              font-family: airtasker_icons;
+              speak: none;
+              font-style: normal;
+              font-weight: 400;
+              font-variant: normal;
+              text-transform: none;
+              content: "🗓";
+              -webkit-font-smoothing: antialiased;
+            }
+            &--detail {
+              margin-right: 4px;
+              margin-left: 5px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+        }
+        .newtask__list--item--footer {
+          height: 32px;
+          font-size: 11px;
+          line-height: 32px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border-top: 1px solid #e7ebfb;
+          &--status {
+            font-weight: 700;
+            text-transform: uppercase;
+            -webkit-font-smoothing: antialiased;
+            color: #7db343;
+          }
+          &--bids {
+            color: #545a77;
+            margin-left: 10px;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .task__list .list{
+    width:100%;
+    .group .newtask__list--item{
+      // margin-left: 10px;
+      margin-left: 0;
+      width: 364px;
+    }
+  }
+  
+}
+@media screen and (max-width: 767px) {
+  .task__list .list{
+    // width: 364px;
+    .group .newtask__list--item{
+      // margin-left: 10px;
+      margin-left: 0;
+      width: 324px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .task__list .list{
+    // width: 364px;
+    width: 100%;
+    position: absolute;
+    background-color:transparent;
+    
+    .group .newtask__list--item{
+      margin-left: 5%;
+
+      width: 90%;
+      z-index:10;
+      
+    }
+  }
+  
+}
+// @media screen and (max-width: 520px){
+//   .task__list .list{
+//     margin-left: 0px;
+//     width: 300px;
+//   }
+// }

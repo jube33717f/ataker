@@ -1,0 +1,15 @@
+export const LOGIN_USER = "login_user";
+export const ERROR_MSG = "error_msg";
+export const LOGOUT_USER = "logout_user";
+export const CHECK_USER = "check_user";
+export const ADD_TASK = "add_task";
+export const CLEAR_POST_TASK = "clear_post_task"
+export const SET_VALIDATION_HOC_CHECK = "set_validation_hoc_check"
+export const ADD_TASK_DETAIL = "add_task_detail";
+export const CLEAR_TASK_DETAIL = "clear_task_detail"
+export const ADD_USER_ROLE = "add_user_role";
+export const RELOAD_TASK_DETAIL = "reload_task_detail"
+export const ADD_TASK_LIST = "add_task_list"
+export const RELOAD_TASK_LIST = "reload_task_list"
+export const ADD_OFFER_DETAIL = "add_offer_detail";
+export const CLEAR_OFFER_DETAIL = "clear_offer_detail"

@@ -1,0 +1,53 @@
+.browsepage {
+  margin: 0 auto;  
+  max-width: 1024px;
+  height: calc(100vh - 106px);
+  position: relative;
+  // padding: 0px 20px;
+  &__container {
+    display: flex; 
+    &--left {
+          
+      // flex: 1;
+      //inner scroll
+      overflow-y: scroll;
+      display: inline-block;
+      height: calc(100vh - 108px);
+      &::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 5px;     /*高宽分别对应横竖滚动条的尺寸*/
+      }
+      &::-webkit-scrollbar-thumb{
+        height:5%;
+        width:3px;
+        background-color:rgb(119, 121, 119);
+        border-radius: 15px;
+      }
+    }
+    &--right {
+      overflow-y: scroll;
+      flex: 2;
+      display: inline-block;
+      height: calc(100vh - 108px);
+      background-color: rgba(173, 216, 230, 0.37);
+      margin: 0px 5px;
+      background-color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .browsepage{
+    &__container{
+      &--left{
+        width:100%;
+        margin: 0px auto;
+        overflow-y: hidden;
+      }
+      &--right{
+        width:0;
+      }
+    }
+  }
+  
+
+}

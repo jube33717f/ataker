@@ -1,0 +1,60 @@
+.account-page {
+  padding-top: 60px;
+  max-width: 1024px;
+  margin: 0 auto;
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  background-color:rgb(253, 254, 254);//jubi
+  &__nav-bar {
+    border-right: 1px solid rgb(231, 235, 251);//jubi
+    height:100%;//jubi
+    margin: 1px;
+    flex: 1;
+    li {
+      padding: 5px 10px;
+      list-style: none;
+      height: 44px;
+      border-bottom: 1px solid #f6f8fd;
+      &:hover {
+        color: #292b32;
+        background: #f9f9f9;
+      }
+    }
+    a {
+      position: relative;
+      top: 25%;
+      text-decoration: none;
+      color: #545a77;
+    }
+    
+    &--icon {
+      border: 1px solid #bbc2dc;
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      margin: 25px auto;
+      position: relative;
+      img {
+        width: 100%;
+      }
+    }
+    &--name {
+      text-align: center;
+      line-height: 30px;
+      margin: 5px 10px 20px;
+      font-weight: 500;
+      font-size: 16px;
+      overflow: hidden;
+      font-family: Acme;
+      letter-spacing: 3px;
+    }
+    width:210px;//Jubi:设置宽度不让他浮动
+  }
+  &__content {
+    flex: 3;
+    border-left: 1px solid #bbc2dc;    
+  }
+  
+}

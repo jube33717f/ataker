@@ -1,0 +1,145 @@
+.user-name {
+  cursor: pointer;
+  color: #008fb4;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  text-decoration: none; 
+}
+
+.avatar-image {
+  img {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    padding: 2px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.poster-detail {
+  margin-top:20px;
+  &__item {
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    position: relative;
+    padding: 5px 0px;
+    border-bottom: 0.4px solid rgba(228, 223, 223, 0.664);
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &--detail {
+      .right-info {
+        font-size: 13px;
+        position: absolute;
+        left: 320px;
+        bottom: 15px;
+      }
+    }
+  }
+}
+
+.task-detail {
+  position: relative;
+  display: flex;
+  margin: 10px 20px;
+  padding-bottom: 40px;
+  left: 80vw;
+  transition: left .4s ease-in;
+  color: #545a77;
+  font-size: 14px;
+  &__left {
+    flex: 2.3;
+    h2 {
+      height: auto;
+      font-weight: 300;
+      font-size: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #292b32;
+      margin: 12px 0px 8px;
+    }
+    &-panel {
+      position: relative;
+      margin: 20px 0px 30px;
+      width: 390px;
+      .task-status {
+        border-radius: 10px;
+        overflow: hidden;
+        display: inline-block;
+        span {
+          display: inline-block;
+          span {
+            text-transform: uppercase;
+            display: block;
+            padding: 2px 12px;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.25px;
+            font-weight: bold;
+            font-family: museo-bold, "Helvetica Neue", Helvetica, Arial,
+            "Lucida Grande", sans-serif;
+          }
+          &.current-status {
+            padding: 2px;
+
+            background-color: rgb(229, 240, 217);
+            color: rgb(125, 179, 67);
+            text-align: center;
+          }
+          &.other-status {
+             color: rgb(187, 194, 220);
+          }
+        }
+      }
+    }
+  }
+  &__right {
+    flex: 1;
+  }
+  &__question {
+    .green-button {
+      margin: 0px 20px; 
+      text-decoration: none;
+    }
+  }
+  &__offer{
+    &--reply {
+      position: relative;
+      left: 40px;
+      display: flex;
+      margin: 10px;
+    }
+    &--offerer {
+      display: flex;
+      .green-button {
+        margin-top: 15px;
+        height: 25px;
+      }
+      h3 {
+        margin: 22px 10px 0px 0px;
+        font-size: 20px;
+      }
+    }
+    &--no-offer {
+      img{
+        opacity: 0.2;
+        width: 35%;
+        display: block;
+        margin: 15px auto;
+      }
+      .green-button {
+        margin: 13px auto;
+        width: 30%;
+        display: block;
+        padding: 10px;        
+      }
+    }
+  }
+}
+
+

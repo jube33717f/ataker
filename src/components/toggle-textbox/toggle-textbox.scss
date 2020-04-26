@@ -1,0 +1,63 @@
+.message-box {
+  max-height: 253px;
+  margin: 0px 16px;
+  padding: 16px 0px;
+  border-top: 1px solid rgb(231, 235, 251);
+  transition: max-height 0.3s ease-out 0s;
+}
+
+.toggle-textbox {
+  .poster-detail__item{ 
+    background-color: none;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  position: relative;
+  button {
+    padding: 3px 5px;
+    margin: 8px 0px;
+    color: #008fb4;
+    font-size: 15px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -35px;
+    left: 0px;
+    &:hover{
+      cursor: pointer;
+      background-color: rgba(222, 240, 248, 0.425);
+      border-radius: 25px;
+    }
+  .arrow-icon {
+    transition: transform 0.3s ease-out 0s;
+  }
+}
+  &__message{  
+    overflow: hidden;
+    transition: max-height 0.3s ease-out 0s;
+    margin-top: 10px;
+    &--content {
+      background-color: #f6f8fd;
+    } 
+    &--bottom {
+      margin: 5px 25px 0px 0px;
+      span {
+        margin-right: 30px;
+      }
+    }
+    &--blur:after {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      content: "";
+      display: block;
+      opacity: 1;
+      height: 30px;
+      transition: opacity 0.3s ease-out 0s;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+    }
+  }
+  
+}

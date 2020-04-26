@@ -1,0 +1,38 @@
+.text-editor {
+    
+    width: 100%;
+    padding: 0px 5px 10px 5px;
+    border: 1px solid #bbc2dc;
+    border-radius: 4px;
+   
+    textarea {
+        width: 100%;
+        border: none;
+        min-height: 50px;
+        max-height: 140px;
+        overflow-y: auto;
+        resize: none;
+        font-size: 13px;
+        outline: none !important;
+    }
+
+    button {
+        color: rgb(0, 143, 180);
+        font-weight: 700;
+        margin: 0px;
+        background: transparent;
+        &:hover{
+            cursor: pointer;
+            background-color: rgba(222, 240, 248, 0.425);
+            border-radius: 25px;
+        }
+    }
+
+    &--right {
+        left: 75%;
+        display: inline-block;
+        position: relative;
+        color:  rgba(128, 128, 128, 0.63)   
+    }
+
+}
